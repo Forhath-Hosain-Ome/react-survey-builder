@@ -1,0 +1,135 @@
+input[type="date"]:before {
+	content: attr(placeholder);
+	color: #aaa;
+	margin-right: 0.5em;
+}
+
+.validation-error {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	z-index: 99999;
+
+	ul {
+		width: auto;
+	}
+
+	.dismiss-modal-button {
+		margin-top: 10px;
+	}
+}
+
+.react-survey-builder-form {
+	position: relative;
+
+	.rfb-item.alwaysbreak {
+		page-break-before: always;
+	}
+
+	.rfb-item.nobreak:before {
+		clear: both;
+	}
+
+	.rfb-item.nobreak {
+		page-break-inside: avoid;
+	}
+
+	.rfb-item {
+		//padding: 10px 0;
+		position: relative;
+
+		// .row {
+		// 	padding: 0 25px;
+		// 	border: 1px solid #6da6e3;
+		// 	border-radius: 10px;
+		// 	margin-top: -18px;
+		// }
+
+		img {
+			max-width: 100%;
+		}
+
+		label {
+			font-weight: normal;
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+
+		.italic {
+			font-style: italic;
+		}
+
+		.form-label {
+			display: block !important;
+		}
+
+		.form-error {
+			margin-top: 8px;
+			margin-bottom: 0px;
+		}
+
+		.form-group {
+			margin-bottom: 8px;
+
+			.option-inline {
+				display: inline-block !important;
+				margin-right: 10px;
+			}
+
+			a {
+				cursor: pointer;
+			}
+
+			input[type='date'] {
+				height: 42px;
+			}
+
+			.m-signature-pad {
+				position: relative;
+				width: auto;
+			}
+
+			.react-star-rating {
+				display: block;
+			}
+
+			.checkbox-label,
+			.radio-label {
+				font-weight: normal;
+				display: block;
+			}
+
+			.form-floating {
+				label {
+					.label-required {
+						margin-left: 5px;
+						// padding: 2px;
+						// font-size: 0.6rem;
+					}
+				}
+
+				& .rbt-input-wrapper {
+					margin-top: 40px;
+				}
+
+				& .rbt-input {
+					height: calc(3.5rem + 2px);
+					line-height: 1.25;
+				}
+				
+				& .rbt-input {
+					padding: 1.625rem 0.75rem 0.625rem 0.75rem;
+				}
+				
+				& .rbt~label {
+					opacity: 0.65;
+					transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+				}
+			}
+		}
+	}
+}

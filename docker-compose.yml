@@ -1,0 +1,10 @@
+services:
+  survey-builder:
+    build: .
+    ports:
+      - "8088:8088"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
